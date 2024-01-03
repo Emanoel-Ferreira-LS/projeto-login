@@ -10,17 +10,62 @@
     <main>
         <section id="login">
             <div id="imagem">
-
+                <img src="imagens/fuundo.jpeg" id="fundo">
             </div>
             <div id="formlario">
                 <h1>Login</h1>
                 <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta.</p>
 
-                <form action="login.php" method="post">
-                    
+                <form action="login.php" method="post" id="form">
+                    <div class="secao-email">
+                        <i>
+                            <img src="icones/user.png" class="user-icon">
+                        </i>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="secao-senha">
+                        <i>
+                            <img src="icones/senha.png"  class="senha-icon">
+                        </i>
+                        <input type="password" name="senha" id="senha" placeholder="Senha">
+                        <i>
+                            <img src="icones/esconder-senha.png"  id="visualizacao-senha">
+                        </i>
+                    </div>
+
+                    <input type="submit" value="Entrar" class="button-entrar">
+
+                    <a href="#"><button type="button" class="esqueci-senha">
+                        Esqueci a senha
+                        <i>
+                            <img src="icones/email.png"  class="email-icon">
+                        </i>    
+                    </button></a>
                 </form>
             </div>
         </section>
     </main>
+
+    <script>
+        var visualizacaoSenha = window.document.querySelector('#visualizacao-senha')
+        var senha = window.document.querySelector("#senha")
+
+        var srcMostrarSenha = 'file:///D:/Documentos%20e%20Projetos/projeto-login/icones/mostrar-senha.png'
+        var srcEsconderSenha = 'file:///D:/Documentos%20e%20Projetos/projeto-login/icones/esconder-senha.png'
+        
+
+        visualizacaoSenha.addEventListener('click', () =>{
+            
+            if(visualizacaoSenha.src == srcEsconderSenha){
+                visualizacaoSenha.src  = "icones/mostrar-senha.png"
+                senha.type = "text"
+
+            }else if(visualizacaoSenha.src == srcMostrarSenha){
+                visualizacaoSenha.src  = "icones/esconder-senha.png"
+                senha.type = "password"
+            }
+        })
+    </script>
 </body>
 </html>

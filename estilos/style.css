@@ -3,5 +3,116 @@
 /*
 PALLETA DE CORES:
     Verde: #49a09d
-    Lilás: #5f2c82
+    
 */
+
+:root{
+    --verde: #49a09d;
+    --lilas: #5f2c82;
+    --branco: #e6e6e6;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Garante que as bordas e o preenchimento não aumentem o tamanho total */
+    background-color: var(--lilas);
+    position: relative;
+    height: 100vh;
+}
+
+#formlario{
+    margin: 10px;
+}
+
+#login{
+    width: 100%;
+}
+
+main{
+    border-radius: 20px;
+    overflow:hidden;
+    background-color: var(--branco);
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-bottom: 30px;
+}
+
+.button-entrar{
+    width: 80%;
+}
+
+.esqueci-senha{
+    width: 80%;
+}
+
+.secao-email, .secao-senha{
+    margin: auto;
+    width: 75vw;
+    height: 50px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 10px;
+    background-color: var(--lilas);
+    margin-bottom: 10px;
+    padding: 0px 5px;
+}
+
+
+#email, #senha {
+    font-size: 1.3em;
+    margin: 0px 10px;
+    padding: 8px;
+    border: transparent;
+    border-radius: 5px;
+    flex: 1; /* Ocupa todo o espaço disponível entre os ícones */
+    min-width: 50px;
+}
+
+#fundo{
+    width: 100%;
+}
+
+.user-icon, .senha-icon{
+    width: 30px;
+}
+
+.email-icon{
+    width: 12px;
+}
+
+#visualizacao-senha{
+    width: 30px;
+    
+}
+
+.esqueci-senha, .button-entrar{
+    width: 75vw;
+    height: 50px;
+    border-radius: 10px;
+    border: transparent;
+    font-size: 1.2em;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.button-entrar{
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.esqueci-senha{
+    border: 1px solid var(--verde);
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
