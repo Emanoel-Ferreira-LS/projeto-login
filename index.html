@@ -48,26 +48,26 @@
     </main>
 
     <script>
-        var visualizacaoSenha = window.document.querySelector('#visualizacao-senha')
-        var senha = window.document.querySelector("#senha")
+        var visualizacaoSenha = window.document.querySelector('#visualizacao-senha');
+        var senha = window.document.querySelector("#senha");
 
-        var srcMostrarSenha = 'file:///D:/Documentos%20e%20Projetos/projeto-login/icones/mostrar-senha.png'
-        var srcEsconderSenha = 'file:///D:/Documentos%20e%20Projetos/projeto-login/icones/esconder-senha.png'
+        var srcMostrarSenha = 'file:///D:/Documentos%20e%20Projetos/projeto-login/icones/mostrar-senha.png';
+        var srcEsconderSenha = 'file:///D:/Documentos%20e%20Projetos/projeto-login/icones/esconder-senha.png';
         
 
         visualizacaoSenha.addEventListener('click', () =>{
             
             if(visualizacaoSenha.src == srcEsconderSenha){
-                visualizacaoSenha.src  = "icones/mostrar-senha.png"
-                senha.type = "text"
-                console.log("texto")
+                visualizacaoSenha.src  = "icones/mostrar-senha.png";
+                senha.type = "text";
+                console.log("texto");
 
             }else if(visualizacaoSenha.src == srcMostrarSenha){
-                visualizacaoSenha.src  = "icones/esconder-senha.png"
-                senha.type = "password"
-                console.log("senha")
+                visualizacaoSenha.src  = "icones/esconder-senha.png";
+                senha.type = "password";
+                console.log("senha");
             }
-        })
+        });
     </script>
 </body>
 </html>
