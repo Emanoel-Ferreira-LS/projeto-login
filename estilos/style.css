@@ -30,6 +30,15 @@ body{
     width: 100%;
 }
 
+#imagem{
+    background-image: url(../imagens/fuundo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height: 250px;
+}
+
 main{
     border-radius: 20px;
     overflow:hidden;
@@ -39,7 +48,7 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding-bottom: 30px;
+
 }
 
 .button-entrar{
@@ -88,8 +97,7 @@ main{
 }
 
 #visualizacao-senha{
-    width: 30px;
-    
+    width: 30px; 
 }
 
 .esqueci-senha, .button-entrar{
@@ -109,10 +117,34 @@ main{
 
 .esqueci-senha{
     border: 1px solid var(--verde);
+    margin-bottom: 30px;
 }
 
 #form{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/*Versão Desktop*/
+
+@media screen and (min-width: 767px) and (orientation: landscape ){
+    #login{
+        display: flex;
+        flex-direction: row;
+        height: 390px;
+    }
+
+    #imagem{
+        height:100%;
+       
+    }
+
+    .esqueci-senha, .button-entrar{
+        width: 45vw;
+    }
+
+    .secao-email, .secao-senha{
+        width: 45vw;
+    }
 }
