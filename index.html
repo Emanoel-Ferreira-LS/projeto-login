@@ -51,27 +51,22 @@
     <script>
         const visualizacaoSenha = document.querySelector('#visualizacao-senha');
         const senha = document.querySelector("#senha");
-
+    
         var srcMostrarSenha = 'icones/mostrar-senha.png';
         var srcEsconderSenha = 'icones/esconder-senha.png';
-
-        console.log(visualizacaoSenha.src);
-
-        visualizacaoSenha.addEventListener('click', () =>{
-
-            console.log(visualizacaoSenha.src);
-            
-            if(visualizacaoSenha.src == srcEsconderSenha){
-                visualizacaoSenha.src  = "icones/mostrar-senha.png";
+    
+        visualizacaoSenha.addEventListener('click', () => {
+            if (visualizacaoSenha.src.endsWith(srcEsconderSenha)) { /*verificar o final da url */
+                visualizacaoSenha.src = "icones/mostrar-senha.png";
                 senha.type = "text";
-                console.log("texto");
-
-            }else if(visualizacaoSenha.src == srcMostrarSenha){
-                visualizacaoSenha.src  = "icones/esconder-senha.png";
+                console.log("Texto visível");
+            } else if (visualizacaoSenha.src.endsWith(srcMostrarSenha)) {
+                visualizacaoSenha.src = "icones/esconder-senha.png";
                 senha.type = "password";
-                console.log("senha");
+                console.log("Senha oculta");
             }
         });
     </script>
+    
 </body>
 </html>
